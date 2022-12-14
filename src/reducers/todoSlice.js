@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import React, { useCallback, useState } from "react";
+// import React, { useCallback, useState } from "react";
 import { v4 as uuid } from "uuid";
 // import styled from "@emotion/styled";
 
@@ -10,7 +10,7 @@ import { v4 as uuid } from "uuid";
 //   width: 300,
 // });
 
-const initialState: Todo[] = [
+const initialState: [] = [
   {
     id: uuid(),
     label: "Buy groceries",
