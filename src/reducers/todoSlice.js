@@ -10,7 +10,7 @@ import { v4 as uuid } from "uuid";
 //   width: 300,
 // });
 
-const initialState: [] = [
+const initialState = [
   {
     id: uuid(),
     label: "Buy groceries",
