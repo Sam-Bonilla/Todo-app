@@ -1,11 +1,10 @@
-import React, { FC } from "react";
 import styled from "@emotion/styled";
 
-const Todo = ({ name, document, id }) => {
-      return  (
-        <div className='todoItem'>
-          </div>
-      )}
+// const Todo = ({ name, document, id }) => {
+//       return  (
+//         <div className='todoItem'>
+//           </div>
+//       )}
       
 export const Wrapper = styled.label({
   display: "flex",
@@ -20,7 +19,7 @@ export const Wrapper = styled.label({
   cursor: "pointer",
 });
 
-const Label = styled.span<{ checked: boolean }>(({ checked }) => ({
+const Label = styled.span(({ checked }) => ({
   textDecoration: checked ? "line-through" : "none",
   fontSize: 20,
   margin: 0,
@@ -37,14 +36,9 @@ const Checkbox = styled.input({
   marginRight: 12,
 });
 
-export interface TodoItemProps {
-  id: string;
-  label: string;
-  checked?: boolean;
-  onChange?: (checked: boolean) =>void;
-  }
 
-export const TodoItem: FC<TodoItemProps> = ({
+
+export const TodoItem = ({
   id,
   label,
   checked = false,

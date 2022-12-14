@@ -1,20 +1,20 @@
-import React, { FC, useState } from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
-import { useDispatch } from "react-redux";
-import { saveTodo } from  "../reducers/todoSlice"; 
+// import { useDispatch } from "react-redux";
+// import { saveTodo } from  "../reducers/todoSlice"; 
 
 
-const dispatch = useDispatch()
+// const dispatch = useDispatch()
 
-const addTodo = () => {
-    console.log(`Adding ${Input}`)
+// const addTodo = () => {
+//     console.log(`Adding ${Input}`)
 
-    dispatch(saveTodo({
-        item: Input,
-        done: false,
-        id: Date.now()
-    }))
-}
+//     dispatch(saveTodo({
+//         item: Input,
+//         done: false,
+//         id: Date.now()
+//     }))
+// }
 
 const Form = styled.form({
   width: "100%",
@@ -30,11 +30,7 @@ const Input = styled.input({
 });
 
 
-export interface AddInputProps {
-  onAdd: (label: string) => void;
-}
-
-export const AddInput: FC<AddInputProps> = ({ onAdd }) => {
+export const AddInput = ({ onAdd }) => {
   const [input, setInput] = useState("");
 
   return (

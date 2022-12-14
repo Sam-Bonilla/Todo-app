@@ -19,29 +19,28 @@ const Wrapper = styled.div({
 * Instead of loading this data on every reload,
 * we should save the todo state to redux store.
 */
-
-// const initialData: Todo[] = [
-//   {
-//     id: uuid(),
-//     label: "Buy groceries",
-//     checked: false,
-//   },
-//   {
-//     id: uuid(),
-//     label: "Reboot computer",
-//     checked: false,
-//   },
-//   {
-//     id: uuid(),
-//     label: "Ace CoderPad interview",
-//     checked: true,
-//   },
-// ];
+const initialData= [
+  {
+    id: uuid(),
+    label: "Buy groceries",
+    checked: false,
+  },
+  {
+    id: uuid(),
+    label: "Reboot computer",
+    checked: false,
+  },
+  {
+    id: uuid(),
+    label: "Ace CoderPad interview",
+    checked: true,
+  },
+];
 
 function App() {
-  const [todos, setTodos] = useState<Todo[]>(initialData);
+  const [todos, setTodos] = useState(initialData);
 
-  const addTodo = useCallback((label: string) => {
+  const addTodo = useCallback((label) => {
     setTodos((prev) => [
       {
         id: uuid(),
@@ -52,7 +51,7 @@ function App() {
     ]);
   }, []);
 
-  const handleChange = useCallback((checked: boolean) => {
+  const handleChange = useCallback((checked) => {
     // handle the check/uncheck logic
   }, []);
 
